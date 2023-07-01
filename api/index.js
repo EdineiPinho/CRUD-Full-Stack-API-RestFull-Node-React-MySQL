@@ -1,5 +1,5 @@
 import express from "express"
-import userRoutes from "./routes/usersRoute"
+import router from "./routes/users"
 import cors from "cors"
 
 const app = express()
@@ -7,6 +7,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use('/', userRoutes)
+app.use('/', router)
 
 app.listen(8800)
