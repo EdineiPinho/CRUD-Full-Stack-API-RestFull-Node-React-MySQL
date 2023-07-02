@@ -2,7 +2,7 @@ import express from "express";
 import { getUsers } from '../constrollers/urser'
 
 const router = express.Router()
-
-router.get('/', getUsers)
+const users = getUsers()
+router.get('/', users)
 
 export default router
